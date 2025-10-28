@@ -15,3 +15,5 @@ df.drop_duplicates(inplace=True)
 df.dropna(inplace=True)
 
 df.drop(['student_id'], axis=1, inplace=True)
+df = pd.get_dummies(df, drop_first=True)
+df.head()
