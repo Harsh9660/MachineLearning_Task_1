@@ -1,0 +1,15 @@
+import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt 
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from collections import Counter
+from sklearn.preprocessing import StandardScaler
+
+
+df = pd.read_csv("Student Performance.csv")
+df.head()
+df.info()
+
+df.drop_duplicates(inplace=True)
+df.dropna(inplace=True)
