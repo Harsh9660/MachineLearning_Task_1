@@ -7,7 +7,7 @@ from collections import Counter
 from sklearn.preprocessing import StandardScaler
 
 
-df = pd.read_csv("Student Performance.csv")
+df = pd.read_csv("StudentPerformance.csv")
 df.head()
 df.info()
 
