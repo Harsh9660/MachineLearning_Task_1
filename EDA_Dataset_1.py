@@ -40,7 +40,7 @@ df[num_cols] = scaler.fit_transform(df[num_cols])
 target_col = 'Performance Index'  
 
 if target_col not in df.columns:
-    raise ValueError(f"⚠️ Target column '{target_col}' not found in dataset!")
+    raise ValueError(f" Target column '{target_col}' not found in dataset!")
 
 X = df.drop(target_col, axis=1)
 y = df[target_col]
@@ -48,9 +48,9 @@ y = df[target_col]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print("\n✅ Training set shape:", X_train.shape)
-print("✅ Test set shape:", X_test.shape)
-print("\n🔍 Missing values in dataset:\n", df.isnull().sum())
+print("\n Training set shape:", X_train.shape)
+print(" Test set shape:", X_test.shape)
+print("\n Missing values in dataset:\n", df.isnull().sum())
 
 
 def load_data(path):
