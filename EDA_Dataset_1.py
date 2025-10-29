@@ -6,12 +6,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 
-df = pd.read_csv('StudentPerformance.csv')
-print("\n🔹 First 5 rows:")
-print(df.head())
+def load_data(path):
+    """Loads dataset from a given path"""
+    return pd.read_csv(path)
 
-print("\n🔹 Dataset Info:")
-print(df.info())
+df = load_data('StudentPerformance.csv')
+
 
 print("\n🔹 Statistical Summary:")
 print(df.describe())
