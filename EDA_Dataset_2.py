@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 import kagglehub
 
 
-# df = pd.read_csv('zara-sales-for-eda.csv')
+
 path = kagglehub.dataset_download("marixe/zara-sales-for-eda")
 
 print("Path to dataset files:", path)
@@ -23,7 +23,7 @@ print(df.info())
 print("\n🔹 Statistical Summary:")
 print(df.describe())
 
-
+"""Preprocesses the dataset by handling missing values, encoding categorical variables, and scaling numerical features."""
 numeric_df = df.select_dtypes(include=['int64', 'float64'])
 plt.figure(figsize=(8, 6))
 sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm')
